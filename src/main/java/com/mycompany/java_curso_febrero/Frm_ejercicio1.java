@@ -117,10 +117,13 @@ public class Frm_ejercicio1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnProcesarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcesarActionPerformed
-        int num= 4;
-        String texto="Hola!!!! este es mi primer proyecto en Netbeans";
-        txtARes.setText("El número es: "+num+"\n");
-        txtARes.append("El texto es: "+texto);
+        String correo= txtCorreo.getText();
+        double edad= Integer.parseInt(txtEdad.getText());
+        //Este hace referencia al nombre
+        String nom= txtNombre.getText() ;
+        txtARes.setText("El Correo es: "+correo+"\n");
+        txtARes.append("La edad es: "+edad+"\n");
+        txtARes.append("El nombre es: "+nom);
     }//GEN-LAST:event_btnProcesarActionPerformed
 
     /**
