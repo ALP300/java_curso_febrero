@@ -6,6 +6,9 @@ package com.mycompany.java_curso_febrero;
 
 import javax.swing.JOptionPane;
 
+
+
+
 /**
  *
  * @author aitor
@@ -121,7 +124,7 @@ public class Frm_calculator extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         double num1= Integer.parseInt(txtNum1.getText());
-        double num2= Integer.parseInt(txtNum1.getText()); 
+        double num2= Integer.parseInt(txtNum2.getText()); 
         double resultado= 0;
         int operacion= cboOperacion.getSelectedIndex();
         switch(operacion){
@@ -135,7 +138,14 @@ public class Frm_calculator extends javax.swing.JFrame {
                 resultado= num1-num2;
                 break;
             case 3:
+                if(num2==0){
+                    JOptionPane.showMessageDialog(null, "NO SE PUEDE DIVIDIR ENTRE 0");
+                    return;
+                }
                 resultado= num1/num2;
+                break;
+            case 4:
+                resultado= num1*num2;
                 break;
             default:
                 JOptionPane.showMessageDialog(null, "OPERACIÓN NO VÁLIDA");
